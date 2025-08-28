@@ -20,10 +20,8 @@ const WhereYouStand = () => {
     return score >= min && score <= max;
   });
 
-  // total % sum
   const totalPct = ranges.reduce((sum, r) => sum + r.pct, 0);
 
-  // default
   let pointerPosition = "0%";
 
   if (pointerIndex !== -1) {
@@ -33,7 +31,7 @@ const WhereYouStand = () => {
 
     pointerPosition = `calc(${
       ((offset + ranges[pointerIndex].pct / 2) / totalPct) * 100
-    }% - 8px)`;
+    }% - 215px)`;
   }
 
   return (
@@ -55,7 +53,7 @@ const WhereYouStand = () => {
               {ranges.map((r, i) => (
                 <div
                   key={i}
-                  className={`flex h-14 items-center justify-center ${
+                  className={`flex h-14 items-center justify-start  ${
                     i === 0 ? "rounded-l-xl" : ""
                   } ${i === ranges.length - 1 ? "rounded-r-md" : ""}`}
                   style={{
@@ -63,7 +61,9 @@ const WhereYouStand = () => {
                     width: `${(r.pct / totalPct) * 100}%`,
                   }}
                 >
-                  {r.pct}%
+                  <div className="ml-4">
+                    {r.pct}%
+                  </div>
                 </div>
               ))}
             </div>
