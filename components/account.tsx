@@ -127,7 +127,7 @@ export default function AccountsRow() {
       </Card>
 
       {/* Right Side (40%) */}
-      <div className="lg:basis-[40%] grid grid-cols-1 gap-4">
+      <div className="lg:basis-[40%] grid grid-cols-1 gap-6 h-80">
         {/* Disputes */}
         <div className="flex flex-row !border-0 !border-t !border-[#066A9B] rounded-lg shadow-sm overflow-hidden w-full">
           <div className="bg-[#E3F7FD] flex items-center -mt-25 justify-end px-4">
