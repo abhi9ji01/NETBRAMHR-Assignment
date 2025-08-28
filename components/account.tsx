@@ -1,9 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
@@ -46,7 +41,7 @@ export default function AccountsRow() {
 
   return (
     <section className="md:px-10 md:py-4 px-4 py-2 flex flex-col lg:flex-row gap-4">
-      {/* Left Big Card (60%) */}
+      {/* Left Card (60%) */}
       <Card className="lg:basis-[60%] !border-0 !border-t !border-[#066A9B]">
         <CardHeader className="flex flex-row items-center justify-between pb-0">
           <div className="flex items-center gap-2">
@@ -56,7 +51,7 @@ export default function AccountsRow() {
             <CircleHelp className="h-4 w-4 text-[#046899]" />
           </div>
 
-          <Tabs defaultValue="closed">
+          <Tabs defaultValue="all">
             <TabsList className="rounded-md bg-[#F7F9FA]">
               <TabsTrigger
                 value="all"
@@ -81,7 +76,6 @@ export default function AccountsRow() {
         </CardHeader>
 
         <CardContent className="grid grid-cols-1 items-center gap-6 py-6 md:grid-cols-2">
-          {/* Donut Chart */}
           <div className="relative h-56 w-full">
             <ResponsiveContainer>
               <PieChart>
@@ -100,7 +94,6 @@ export default function AccountsRow() {
               </PieChart>
             </ResponsiveContainer>
 
-            {/* Center placeholder number */}
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               <h1 className="text-lg font-semibold text-gray-700 text-center">
                 <span className="block">Total</span>
@@ -112,7 +105,6 @@ export default function AccountsRow() {
             </div>
           </div>
 
-          {/* Legends */}
           <div className="grid grid-cols-1 gap-6 text-sm font-bold">
             {donutData.map((d, i) => (
               <LegendItem

@@ -14,7 +14,6 @@ const WhereYouStand = () => {
     { label: "778-900", pct: 20, color: "#009900" },
   ];
 
-  // find range index
   const pointerIndex = ranges.findIndex((r) => {
     const [min, max] = r.label.split("-").map(Number);
     return score >= min && score <= max;
@@ -36,7 +35,7 @@ const WhereYouStand = () => {
 
   return (
     <section className="grid grid-cols-1 gap-4 md:px-10 md:py-4 px-4 py-2 ">
-      <div className="mt-10">
+      <div className="mt-5">
         <div className="flex items-center gap-2">
           <div className="text-lg font-bold text-[#046899] tracking-wide">
             WHERE YOU STAND
@@ -61,14 +60,11 @@ const WhereYouStand = () => {
                     width: `${(r.pct / totalPct) * 100}%`,
                   }}
                 >
-                  <div className="ml-4">
-                    {r.pct}%
-                  </div>
+                  <div className="ml-4">{r.pct}%</div>
                 </div>
               ))}
             </div>
 
-            {/* POINTER (dynamic) */}
             <div
               className="absolute -bottom-6 flex flex-col items-center"
               style={{ left: pointerPosition }}
@@ -82,7 +78,6 @@ const WhereYouStand = () => {
             </div>
           </div>
 
-          {/* SCORE DISPLAY */}
           <div className="text-center -mt-2">
             <div className="text-sm text-black z-10 font-semibold">
               Your NB Score
@@ -90,7 +85,6 @@ const WhereYouStand = () => {
             <div className="text-4xl mt-2 font-bold text-black">{score}</div>
           </div>
 
-          {/* LEGEND */}
           <div className="border-t pt-4">
             <div className="flex items-center justify-center gap-6">
               <span className="font-semibold text-[#262626] text-sm">

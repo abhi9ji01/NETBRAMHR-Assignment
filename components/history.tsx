@@ -13,7 +13,6 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { CircleHelp, ArrowUp, ArrowDown, ArrowRight } from "lucide-react";
 
-// ✅ Define type for history data
 type HistoryDataPoint = {
   month: string;
   score: number | null;
@@ -42,7 +41,6 @@ const COLORS = {
   chipYellowCircle: "#0078AE",
 };
 
-// ✅ Properly typed CustomDot with optional payload
 const CustomDot = (props: DotProps & { payload?: HistoryDataPoint }) => {
   const { cx, cy, payload } = props;
   if (!payload || payload.score == null) return null;
@@ -138,7 +136,7 @@ function ScoreItem({
 export function HistoryRow() {
   return (
     <div className="md:px-10 md:py-4 px-4 py-2">
-      <div className="pb-2 mt-10">
+      <div className="pb-2 mt-5">
         <div className="flex items-center gap-2">
           <div className="text-lg text-[#046899] font-bold uppercase">
             NB Score History

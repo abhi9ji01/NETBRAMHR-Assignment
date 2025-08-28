@@ -8,7 +8,7 @@ import {
   Layers,
   Gift,
   ArrowUpRight,
-  type LucideIcon, // ✅ import type for icon props
+  type LucideIcon, 
 } from "lucide-react";
 import {
   Accordion,
@@ -23,7 +23,7 @@ function SidebarItem({
   icon: Icon,
   label,
 }: {
-  icon: LucideIcon; // ✅ correct typing
+  icon: LucideIcon;
   label: string;
 }) {
   return (
@@ -57,7 +57,6 @@ export default function Sidebar() {
               </div>
             </AccordionTrigger>
 
-            {/* Submenu with vertical line */}
             <AccordionContent className="pl-10 pr-3 text-base text-white/80 space-y-2 relative">
               <div className="absolute left-4 top-0 bottom-0 w-px bg-white/30" />
               <div className="cursor-pointer hover:text-white text-sm">
@@ -76,7 +75,6 @@ export default function Sidebar() {
           </AccordionItem>
         </Accordion>
 
-        {/* Other Sections */}
         <SidebarItem icon={FileText} label="Your Report" />
 
         <div className="relative">
