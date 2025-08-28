@@ -63,7 +63,7 @@ export default function Sidebar() {
               <div className="cursor-pointer hover:text-white text-sm">
                 Score & Report
               </div>
-              <div className="cursor-pointer font-semibold text-white text-sm">
+              <div className="cursor-pointer hover:text-white   text-sm">
                 Summary
               </div>
               <div className="cursor-pointer hover:text-white text-sm">
